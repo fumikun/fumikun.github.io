@@ -31,26 +31,25 @@ export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <header className="text-white bg-slate-900">
+        <header className="text-slate-100 border-slate-100 bg-slate-800">
             <nav className="flex items-center justify-between p-4 mx-auto max-w-7xl lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">My profile</span>
                         <div className='text-2xl text-white'>fumikun</div>
-                        {/* <img className="w-auto h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" /> */}
                     </a>
                 </div>
                 <div className="flex lg:hidden">
                     <button
                         type="button"
-                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+                        className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-slate-100"
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
                         <Bars3Icon className="w-6 h-6" aria-hidden="true" />
                     </button>
                 </div>
-                <Popover.Group className="hidden lg:flex lg:gap-x-12">
+                <Popover.Group className="hidden lg:flex lg:gap-x-12 bg-slate-900">
                     <a href="#about" className="text-sm font-semibold leading-6 text-white-900">
                         About me
                     </a>
@@ -66,19 +65,14 @@ export const Header = () => {
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-10" />
-                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full px-6 py-6 overflow-y-auto text-white bg-slate-900 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
-                            <img
-                                className="w-auto h-8"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                alt=""
-                            />
+                            <div className='text-2xl text-white'>fumikun</div>
                         </a>
                         <button
                             type="button"
-                            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                            className="-m-2.5 rounded-md p-2.5 text-slate-100"
                             onClick={() => setMobileMenuOpen(false)}
                         >
                             <span className="sr-only">Close menu</span>
@@ -108,29 +102,21 @@ export const Header = () => {
                                 </Disclosure>
                                 <a
                                     href="#about"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50"
+                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50 hover:text-slate-900"
                                 >
                                     About me
                                 </a>
                                 <a
                                     href="#"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50"
+                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50 hover:text-slate-900"
                                 >
                                     Works
                                 </a>
                                 <a
                                     href="#"
-                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50"
+                                    className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50 hover:text-slate-900"
                                 >
                                     Company
-                                </a>
-                            </div>
-                            <div className="py-6">
-                                <a
-                                    href="#"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white-900 hover:bg-gray-50"
-                                >
-                                    Log in
                                 </a>
                             </div>
                         </div>
