@@ -1,31 +1,9 @@
 import { useState } from 'react'
-import { Dialog, Disclosure, Popover } from '@headlessui/react'
+import { Dialog, Popover } from '@headlessui/react'
 import {
-    ArrowPathIcon,
     Bars3Icon,
-    ChartPieIcon,
-    CursorArrowRaysIcon,
-    FingerPrintIcon,
-    SquaresPlusIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
-// import { ChevronDownIcon, PhoneIcon, PlayCircleIcon } from '@heroicons/react/20/solid'
-
-const products = [
-    { name: 'Analytics', description: 'Get a better understanding of your traffic', href: '#', icon: ChartPieIcon },
-    { name: 'Engagement', description: 'Speak directly to your customers', href: '#', icon: CursorArrowRaysIcon },
-    { name: 'Security', description: 'Your customers’ data will be safe and secure', href: '#', icon: FingerPrintIcon },
-    { name: 'Integrations', description: 'Connect with third-party tools', href: '#', icon: SquaresPlusIcon },
-    { name: 'Automations', description: 'Build strategic funnels that will convert', href: '#', icon: ArrowPathIcon },
-]
-// const callsToAction = [
-//     { name: 'Watch demo', href: '#', icon: PlayCircleIcon },
-//     { name: 'Contact sales', href: '#', icon: PhoneIcon },
-// ]
-
-// function classNames(...classes) {
-//     return classes.filter(Boolean).join(' ')
-// }
 
 export const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -53,8 +31,8 @@ export const Header = () => {
                     <a href="#about" className="text-sm font-semibold leading-6 text-white-900">
                         About me
                     </a>
-                    <a href="#" className="text-sm font-semibold leading-6 text-white-900">
-                        Works
+                    <a href="#skill" className="text-sm font-semibold leading-6 text-white-900">
+                        Skills
                     </a>
                     <a href="#" className="text-sm font-semibold leading-6 text-white-900">
                         Company
@@ -82,24 +60,6 @@ export const Header = () => {
                     <div className="flow-root mt-6">
                         <div className="-my-6 divide-y divide-gray-500/10">
                             <div className="py-6 space-y-2">
-                                <Disclosure as="div" className="-mx-3">
-                                    {({ open }) => (
-                                        <>
-                                            <Disclosure.Panel className="mt-2 space-y-2">
-                                                {[...products, ...callsToAction].map((item) => (
-                                                    <Disclosure.Button
-                                                        key={item.name}
-                                                        as="a"
-                                                        href={item.href}
-                                                        className="block py-2 pl-6 pr-3 text-sm font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50"
-                                                    >
-                                                        {item.name}
-                                                    </Disclosure.Button>
-                                                ))}
-                                            </Disclosure.Panel>
-                                        </>
-                                    )}
-                                </Disclosure>
                                 <a
                                     href="#about"
                                     className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50 hover:text-slate-900"
@@ -107,10 +67,10 @@ export const Header = () => {
                                     About me
                                 </a>
                                 <a
-                                    href="#"
+                                    href="#skill"
                                     className="block px-3 py-2 -mx-3 text-base font-semibold leading-7 rounded-lg text-white-900 hover:bg-gray-50 hover:text-slate-900"
                                 >
-                                    Works
+                                    Skills
                                 </a>
                                 <a
                                     href="#"
