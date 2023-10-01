@@ -1,19 +1,9 @@
-import { Header } from './components/header'
-import { Introduction } from './components/introduction'
-import { Works } from './components/works'
-import { Skills } from './components/skills'
-import './App.css'
-
-
-function App() {
+import { Intro } from "./components/intro"
+const App = () => {
   return (
     <>
-      <Header />
-      <Introduction />
-      <Skills />
-      <Works />
+      <Intro />
     </>
   )
 }
-
 export default App
